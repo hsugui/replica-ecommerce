@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>RÉPLICA de um E-commerce</title>
+    <link rel="icon" type="image/png" href="./images/icon-t-shirt.png">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</head>
+<body>
+    <!-- BEGIN MODAL -->
+    <div class="modal fade" tabindex="-1" id="myModal">
+        <div class="modal-dialog modal-dialog-centered justify-content-center">
+          <div class="modal-content custom-modal-content">
+            <div class="modal-header">
+              <div class="modal-cabecalho"><img src="./images/icon-woman.png" alt="Logo E-commerce" width="40px"></div>
+              <button type="button" class="btn-close custom-btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <img class="modal-foto" src="./images/modal-woman.jpg" alt="Acessórios femininos" width="349">
+                <p class="texto-modal-1 mt-3 mb-0">ganhe R$ 10 na sua 1ª compra</p>
+                <p class="texto-modal-2">nas compras acima de R$ 99</p>
+                <div><button type="button" class="btn custom-btn custom-btn-modal">Criar conta</button></div>
+                <div><p class="texto-modal-2 mt-3 mx-3 px-3">Ao criar uma conta, você está de acordo com<br>
+                    os <span class="texto-modal-enfeitado">termos de serviço</span> e as <span class="texto-modal-enfeitado">políticas de privacidade</span><br>
+                    do e-commerce.</p></div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
+    <header>
+        <!-- BEGIN TOP HEADER -->
+        <div class="custom-top-header">
+            <a class="header-link" href="#"><strong>é agora ou nunca 💥
+                    frete quase grátis</strong> – por tempo limitado <u>nesses produtos todos</u></a>
+        </div>
+        <!-- END TOP HEADER -->
+        <!-- BEGIN HEADER-NAVBAR -->
+        <div class="container custom-container-header px-0">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <div class="container-fluid px-0">
+                    <!-- BEGIN OFFCANVAS -->
+                    <button class="btn offc-btn" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <img class="menu-icon" src="./images/icon-menu.png" alt="Menu Icon">
+                    </button>
+
+                    <div class="offcanvas offcanvas-start offc" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-body">
+                            <div class="row">
+                                <div class="col px-0 mt-3">
+                                    <a class="nav-link departamentos-offcanvas titulo-offcanvas"
+                                        href="#">departamentos</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9 px-0">
+                                    <a class="nav-link departamentos-offcanvas" href="#">moças</a>
+                                </div>
+                                <div class="col-3 d-flex align-self-end">
+                                    <a class="nav-link departamentos-offcanvas" href="#"><img
+                                            src="./images/icon-right-arrow-black.png" alt="Seta preta para a direita" width="12"></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9 px-0">
+                                    <a class="nav-link departamentos-offcanvas" href="#">rapazes</a>
+                                </div>
+                                <div class="col-3 d-flex align-self-end">
+                                    <a class="nav-link departamentos-offcanvas" href="#"><img
+                                            src="./images/icon-right-arrow-black.png" alt="Seta preta para a direita" width="12"></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9 px-0">
+                                    <a class="nav-link departamentos-offcanvas" href="#">kids</a>
+                                </div>
+                                <div class="col-3 d-flex align-self-end">
+                                    <a class="nav-link departamentos-offcanvas" href="#"><img
+                                            src="./images/icon-right-arrow-black.png" alt="Seta preta para a direita" width="12"></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9 px-0">
+                                    <a class="nav-link departamentos-offcanvas" href="#">casa&tal</a>
+                                </div>
+                                <div class="col-3 d-flex align-self-end">
+                                    <a class="nav-link departamentos-offcanvas" href="#"><img
+                                            src="./images/icon-right-arrow-black.png" alt="Seta preta para a direita" width="12"></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-9 px-0">
+                                    <a class="nav-link departamentos-offcanvas" href="#">reais oficiais</a>
+                                </div>
+                                <div class="col-3 d-flex align-self-end">
+                                    <a class="nav-link departamentos-offcanvas" href="#"><img
+                                            src="./images/icon-right-arrow-black.png" alt="Seta preta para a direita" width="12"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END OFFCANVAS -->
+
+                    <a class="navbar-brand logo-fora" href="#">
+                        <img src="./images/icon-woman.png" alt="Logo E-commerce" width="40">
+                    </a>
+                    <!-- ITENS MENU RESPONSIVO -->
+                    <div class="custom-item nav-item d-flex justify-content-between ajuda-entrar">
+                        <a class="nav-link custom-setores itens-fora" href="#">ajuda</a>
+                        <a class="nav-link custom-setores itens-fora" href="#">entrar</a>
+                    </div>
+                    <!-- SETORES TELA GRANDE -->
+                    <div class="navbar-collapse collapse justify-content-between" id="navbarTogglerDemo03">
+                        <form class="d-flex">
+                            <input class="form-control me-2 custom-search custom-placeholder" type="search"
+                                placeholder="busque &quot;metallica&quot" aria-label="Search">
+                            <button type="submit" class="btn-search"></button>
+                        </form>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 custom-lista">
+                            <li class="nav-item custom-item">
+                                <a class="nav-link custom-setores" href="#">moças</a>
+                            </li>
+                            <li class="nav-item custom-item">
+                                <a class="nav-link custom-setores" href="#">rapazes</a>
+                            </li>
+                            <li class="nav-item custom-item">
+                                <a class="nav-link custom-setores" href="#">kids</a>
+                            </li>
+                            <li class="nav-item custom-item">
+                                <a class="nav-link custom-setores" href="#">casa&tal</a>
+                            </li>
+                            <li class="nav-item custom-item">
+                                <a class="nav-link custom-setores me-2" href="#">reais oficiais</a>
+                            </li>
+                            <li class="nav-item itens-dentro">
+                                <a class="nav-link custom-setores custom-help ps-3" href="#"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-question-circle" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                        <path
+                                            d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                    </svg></a>
+                            </li>
+                            <li class="nav-item custom-item itens-dentro">
+                                <a class="nav-link custom-setores" href="#">entrar</a>
+                            </li>
+                            <li class="nav-item itens-dentro">
+                                <a class="nav-link" href="#"><button type="button" class="btn custom-btn">quero
+                                        vender</button></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- BEGIN SEARCH (telas menores) -->
+            <div class="search-small">
+                <form class="d-flex">
+                    <input class="form-control custom-search custom-placeholder" type="search"
+                        placeholder="busque &quot;dream theater&quot" aria-label="Search">
+                    <button type="submit" class="btn-search"></button>
+                </form>
+            </div>
+            <!-- END SEARCH -->
+        </div>
+        <!-- END HEADER-NAVBAR -->
+    </header>
+    <!-- BEGIN BANNER CAROUSEL -->
+    <div class="custom-division"></div>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner caoursel-border">
+                        <div class="carousel-item active">
+                            <img src="./images/banner1.jpg"
+                                class="d-block w-100 banner-img" alt="Banner 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/banner3.jpg"
+                                class="d-block w-100 banner-img" alt="Banner 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/banner2.jpg"
+                                class="d-block w-100 banner-img" alt="Banner 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- END BANNER CAROUSEL -->
+        <!-- BEGIN LISTA DE PRODUTOS -->
+        <div class="container">
+            <h2 class="titulo-clicavel">mas gente,</h2>
+            <div class="row">
+                <h3 class="col titulo-clicavel">olha isso!</h3>
+                <span class="col pe-0 d-flex justify-content-end redirecionamento-produtos red-prod">
+                    que coisa mais linda<img class="ms-2 d-flex align-self-center" src="./images/icon-right-arrow.png" alt="Seta preta para a direita"
+                        width="15" height="15">
+                </span>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-start mb-2">
+                    <div class="produtos-venda-2 produtos-venda-maior-2 bicho-1 "><span class="textinho-rosa">R$ 230
+                            <span class="riscado">R$ 250</span></span></div>
+                </div>
+                <div class="col-lg-2 col-sm-6 d-flex flex-column justify-content-around ps-1">
+                    <div class="produtos-venda-2 bicho-2 d-flex mb-2"><span class="textinho-rosa">R$ 120 <span
+                                class="riscado">R$ 150</span></span></div>
+                    <div class="produtos-venda-2 bicho-3 d-flex mb-2"><span class="textinho">R$ 100</span></div>
+                </div>
+
+                <div class="col-lg-2 col-sm-6 d-flex flex-column justify-content-around ps-1">
+                    <div class="produtos-venda-2 bicho-4 d-flex mb-2"><span class="textinho">R$ 50</span></div>
+                    <div class="produtos-venda-2 bicho-5 d-flex mb-2"><span class="textinho-rosa">R$ 190 <span
+                                class="riscado">R$ 210</span></span></div>
+                </div>
+
+                <div class="col-lg-2 col-sm-6 d-flex flex-column justify-content-around ps-1">
+                    <div class="produtos-venda-2 bicho-6 d-flex mb-2"><span class="textinho">R$ 45</span></div>
+                    <div class="produtos-venda-2 bicho-7 d-flex mb-2"><span class="textinho">R$ 30</span></div>
+                </div>
+
+                <div class="col-lg-2 col-sm-6 d-flex flex-column justify-content-around ps-1">
+                    <div class="produtos-venda-2 bicho-8 d-flex mb-2"><span class="textinho">R$ 120</span></div>
+                    <div class="produtos-venda-2 bicho-9 d-flex mb-2"><span class="textinho-rosa">R$ 20 <span
+                                class="riscado">R$ 50</span></span></div>
+                </div>
+            </div>
+            <div><button class="btn redirecionamento-produtos-menor">que coisa mais linda</button></div>
+        </div>
+
+        <div class="container">
+            <h2 class="titulo-clicavel">fiat lux</h2>
+            <div class="row">
+                <h3 class="col titulo-clicavel">🌞</h3>
+                <span class="col pe-0 d-flex justify-content-end redirecionamento-produtos red-prod">
+                    iluminaê!<img class="ms-2 d-flex align-self-center" src="./images/icon-right-arrow.png" alt="Seta preta para a direita"
+                        width="15" height="15">
+                </span>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-center align-self-center mb-2">
+                    <div class="produtos-venda-2 produtos-venda-maior-2 produto-venda-c "><span class="textinho-rosa">R$
+                            400 <span class="riscado">R$ 750</span></span></div>
+                </div>
+                <div class="col-lg-2 col-sm-6 d-flex flex-column justify-content-around">
+                    <div class="produtos-venda-2 produto-venda-a d-flex mb-2"><span class="textinho">R$ 150</span></div>
+                    <div class="produtos-venda-2 produto-venda-b d-flex mb-2"><span class="textinho">R$ 253</span></div>
+                </div>
+                <div class="col-lg-2 col-sm-6 d-flex flex-column justify-content-around">
+                    <div class="produtos-venda-2 produto-venda-d d-flex mb-2"><span class="textinho-rosa">R$ 300 <span
+                                class="riscado">R$ 580</span></span></div>
+                    <div class="produtos-venda-2 produto-venda-e d-flex mb-2"><span class="textinho">R$ 100</span></div>
+                </div>
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-center align-self-center mb-2">
+                    <div class="produtos-venda-2 produtos-venda-maior-2 produto-venda-f"><span class="textinho">R$
+                            150</span></div>
+                </div>
+            </div>
+            <div><button class="btn redirecionamento-produtos-menor">iluminaê!</button></div>
+        </div>
+        <!-- END LISTA DE PRODUTOS -->
+    </div>
+    <!-- BEGIN CONTAINER APP -->
+    <h2 class="container vibra-titulo">*Tá vibrando*</h2>
+    <div class="container vibra">
+        <div class="row">
+            <div class="col-8">
+                <h3>Baixe agora o app</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Suscipit dicta culpa beatae temporibus alias.</p>
+                <ul class="lista-apps">
+                    <li>
+                        <a><img class="titulo-clicavel img-googleplay"></a>
+                    </li>
+                    <li>
+                        <a><img class="titulo-clicavel img-applestore"></a>
+                    </li>
+                </ul>
+            </div>
+            <div"><img class="img-vibra"></div>
+        </div>
+    </div>
+    <!-- END CONTAINER APP -->
+    <!-- BEGIN FOOTER -->
+    <footer class=" container tamanho-fonte">
+        <!-- TITULOS SETORES -->
+        <div class="row titulos-footer mt-5">
+            <div class="col-lg-2 col-sm-12 alinhamento-footer">
+                categorias<span class="icon-setinha"><img src="./images/icon-down-arrow.png" alt="Seta preta para baixo" width="12"></span>
+            </div>
+            <div class="col-lg-2 col-sm-12 alinhamento-footer">
+                mais buscados<span class="icon-setinha"><img src="./images/icon-down-arrow.png" alt="Seta preta para baixo" width="12"></span>
+            </div>
+            <div class="col-lg-2 col-sm-12 alinhamento-footer">
+                marcas mais buscadas<span class="icon-setinha"><img src="./images/icon-down-arrow.png" alt="Seta preta para baixo" width="12"></span>
+            </div>
+            <div class="col-lg-2 col-sm-12 alinhamento-footer utilidades">
+                utilidades<span class="icon-setinha"><img src="./images/icon-down-arrow.png" alt="Seta preta para baixo" width="12"></span>
+            </div>
+            <div class="col-lg-2 col-sm-12 alinhamento-footer">
+                minha conta<span class="icon-setinha"><img src="./images/icon-down-arrow.png" alt="Seta preta para baixo" width="12"></span>
+            </div>
+            <div class="col-lg-2 col-sm-12 alinhamento-footer">
+                siga a gente<span class="icon-setinha"><img src="./images/icon-down-arrow.png" alt="Seta preta para baixo" width="12"></span>
+            </div>
+        </div>
+        <!-- ITENS SETORES -->
+        <div class="row itens-lista">
+            <div class="col-2">e-commerce</div>
+            <div class="col-2">notebook</div>
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-6">farm</div>
+                    <div class="col-6">adidas</div>
+                </div>
+            </div>
+            <div class="col-2 ps-5">ajuda</div>
+            <div class="col-2">minha loja</div>
+            <div class="col-2">facebook</div>
+        </div>
+        <div class="row itens-lista">
+            <div class="col-2">moda feminina</div>
+            <div class="col-2">sofás</div>
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-6">melissa</div>
+                    <div class="col-6">zara</div>
+                </div>
+            </div>
+            <div class="col-2 ps-5">como vender</div>
+            <div class="col-2">minhas vendas</div>
+            <div class="col-2">twitter</div>
+        </div>
+        <div class="row itens-lista">
+            <div class="col-2">moda masculina</div>
+            <div class="col-2">iphone</div>
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-6">vans</div>
+                    <div class="col-6">nike</div>
+                </div>
+            </div>
+            <div class="col-2 ps-5">como comprar</div>
+            <div class="col-2">minhas commpras</div>
+            <div class="col-2">instagram</div>
+        </div>
+        <div class="row itens-lista footer-division mb-4">
+            <div class="col-2">infantil</div>
+            <div class="col-2">desktop</div>
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-6">pandora</div>
+                    <div class="col-6">vivara</div>
+                </div>
+            </div>
+            <div class="col-2 ps-5">tarifas</div>
+            <div class="col-2">banco</div>
+        </div>
+        <!-- INFORMAÇÕES SOBRE O SITE E A EMPRESA -->
+        <div class="footer-division">
+            <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dicta culpa beatae temporibus alias ea non soluta impedit dolores molestias tempore, ipsum atque libero veniam unde illo eligendi exercitationem aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dicta culpa beatae temporibus alias ea non soluta impedit dolores molestias tempore, ipsum atque libero veniam unde illo eligendi exercitationem aperiam.</p>
+        </div>
+
+        <div class="direitos">
+            <div class="row">
+                <div class="col-sm-12 col-lg-1 pe-0">
+                    <img src="./images/icon-woman.png" alt="Logo E-commerce" width="40">
+                </div>
+                <div class="col-sm-12 col-lg-8 direitos-texto d-flex align-items-center">
+                    e-commerce © 2021 - todos os direitos reservados - e-commerce S.A.
+                    CNPJ: 00.000.000/0000-00<br>
+                    alameda fofinha, 001, 14° andar, sala 3436, bairro fofinho muito legal,
+                    cidade, sp, 00000-000 - (00) 0000-0000
+                </div>
+            </div>
+        </div>
+        <!-- INFORMAÇÕES – RESPONSIVO (TAMANHO MENOR) -->
+        <div class="direitos-menor">
+            <div class="row direitos-texto ps-4">
+                <p>e-commerce © 2021 - todos os direitos reservados</p>
+                <p>e-commerce S.A.<br>CNPJ: 00.000.000/0000-00</p>
+                <p>alameda fofinha, 001, 14° andar, sala 3436, bairro fofinho muito legal, cidade, sp, 00000-000 - (00) 0000-0000</p>
+            </div>
+            <div class="icone-footer">
+                <img src="./images/icon-woman.png" alt="Logo E-commerce" width="40">
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous">
+    </script>
+</body>
+</html>
