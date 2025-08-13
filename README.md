@@ -22,3 +22,8 @@ It was developed to practice and showcase skills in **JavaScript**, **HTML**, an
 
 ## Screenshots
 
+![Homepage 1](/images/screenshots/home1.png)
+
+![Homepage 2](/images/screenshots/home2.png)
+
+![Homepage 3](/images/screenshots/home3.png)
